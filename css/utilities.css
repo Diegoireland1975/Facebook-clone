@@ -1,0 +1,17 @@
+/* variables */
+:root {
+  --main-bg-color: #efefef;
+  --nav-bg-color: #1876f2;
+}
+
+/* utilities */
+.container {
+  width: 98%;
+  margin: 0 auto;
+  padding: 0.5rem 0;
+}
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
