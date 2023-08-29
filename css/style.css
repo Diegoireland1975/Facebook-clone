@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap");
 *,
 *::after,
 ::before {
@@ -18,6 +18,9 @@ img {
 li {
   list-style: none;
 }
+a {
+  text-decoration: none;
+}
 /* Nav */
 .logo {
   width: 45px;
@@ -25,6 +28,9 @@ li {
 }
 .main-nav {
   background-color: var(--nav-bg-color);
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 .nav-left li {
   display: none;
@@ -42,36 +48,93 @@ li {
   border-radius: 50%;
   cursor: pointer;
 }
+
 .search-box {
   background-color: var(--main-bg-color);
-  width: 0;
   border-radius: 20px;
   padding: 0 1.2rem;
   margin-left: 1rem;
-  justify-self: self-start;
-}
-.search-box:checked {
-  width: 200px;
 }
 
 .search-box img {
-  width: 1.2rem;
+  width: 1rem;
 }
 .search-box input {
-  width: 100%;
+  width: 0;
   background-color: transparent;
   border: 0;
   outline: none;
   padding: 10px;
 }
+.search-box > input:focus {
+  width: 150px;
+}
 
+/* MAIN CONTENT */
+.main .container {
+  padding: 1.5rem 0;
+}
+
+.left-sidebar {
+  position: sticky;
+  top: 70px;
+  align-self: flex-start;
+  flex-basis: 25%;
+  height: 100vh;
+  display: none;
+}
+.right-sidebar {
+  position: sticky;
+  top: 70px;
+  align-self: flex-start;
+  flex-basis: 25%;
+  height: 100vh;
+  display: none;
+}
+.center-content {
+  flex-basis: 47%;
+}
+.imp-links {
+  border-bottom: 2px solid #ccc;
+}
+.imp-links a,
+.shortcut-links a {
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  color: var(--link-color1);
+  width: fit-content;
+}
+.imp-links img {
+  width: 1.463rem;
+  margin-right: 0.938rem;
+}
+.imp-links a:last-child {
+  color: var(--link-color2);
+}
+.shortcut-links img {
+  border-radius: 4px;
+  width: 2.5rem;
+  margin-right: 0.938rem;
+}
+.shortcut-links p {
+  margin: 1rem 0 1.563rem;
+  color: var(--heading-color);
+  font-weight: 500;
+}
 /* MEDIA QUERIES */
 @media (min-width: 768px) {
-  .nav-left li {
-    display: inline-block;
+  .search-box .input {
+    width: 200px;
   }
-  .search-box {
-    background-color: var(--main-bg-color);
-    width: 300px;
+  .right-sidebar {
+    display: inline-flex;
+  }
+}
+
+@media (min-width: 1064px) {
+  .left-sidebar {
+    display: inline-block;
   }
 }

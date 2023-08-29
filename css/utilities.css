@@ -2,11 +2,16 @@
 :root {
   --main-bg-color: #efefef;
   --nav-bg-color: #1876f2;
+  --online-bg-color: #41db51;
+  --sidebar-bg-color: #cbdffa;
+  --link-color1: #000;
+  --link-color2: #1876f2;
+  --heading-color: #333;
 }
 
 /* utilities */
 .container {
-  width: 98%;
+  width: 95%;
   margin: 0 auto;
   padding: 0.5rem 0;
 }
@@ -14,4 +19,20 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.online {
+  position: relative;
+}
+
+.online::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  background: var(--online-bg-color);
 }
