@@ -3,10 +3,12 @@
   --main-bg-color: #efefef;
   --nav-bg-color: #1876f2;
   --online-bg-color: #41db51;
-  --sidebar-bg-color: #cbdffa;
+  --sidebar-bg-color: #fff;
   --link-color1: #000;
-  --link-color2: #1876f2;
+  --link-color2: #0a6ff1;
   --heading-color: #333;
+  --text-color: #626262;
+  --box-shadow: rgba(0, 0, 0, 0.1);
 }
 
 /* utilities */
@@ -21,6 +23,9 @@
   align-items: center;
 }
 
+.text-center {
+  text-align: center;
+}
 .online {
   position: relative;
 }
