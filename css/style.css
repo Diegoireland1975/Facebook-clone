@@ -43,12 +43,12 @@ a {
 .nav-user-icon {
   margin-left: 2rem;
 }
-.nav-user-icon img {
+.nav-user-icon img,
+.online-list img {
   width: 40px;
   border-radius: 50%;
   cursor: pointer;
 }
-
 .search-box {
   background-color: var(--main-bg-color);
   border-radius: 20px;
@@ -142,10 +142,16 @@ a {
   font-size: 0.75rem;
   color: var(--link-color2);
 }
+.sidebar-ads {
+  margin-bottom: 1.25rem;
+  border-radius: 4px;
+}
 .event {
-  justify-content: flex-start;
   font-size: 0.875rem;
   margin-bottom: 1.25rem;
+}
+.event.flex {
+  justify-content: flex-start;
 }
 .left-event {
   border-radius: 10px;
@@ -167,8 +173,13 @@ a {
   padding: 4px 0;
   font-size: 0.625rem;
 }
-.right-event {
+/* .right-event {
   margin-right: auto;
+} */
+.right-event .location {
+  width: 8px;
+  display: inline;
+  margin-right: 5px;
 }
 .right-event p {
   font-size: 0.75rem;
@@ -177,6 +188,11 @@ a {
 .right-event a {
   font-size: 0.75rem;
   color: var(--link-color2);
+}
+
+.online-list.flex {
+  justify-content: flex-start;
+  margin-bottom: 1rem;
 }
 /* MEDIA QUERIES */
 @media (min-width: 768px) {
